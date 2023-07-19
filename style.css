@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'Times New Roman', Times;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/cal.jpg');
+}
+
+.container{
+    position: fixed;
+    height: 530px;
+    width: 400px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid rgb(129, 59, 94); */
+}
+.btn-login{
+    height: 80px;
+    width: 300px;
+    background-color: rgba(165, 162, 162, 0.919);
+    border: 3px solid rgb(0, 0, 0);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 40px;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    transition: 0.5s;
+    top: 200pxpx;
+    right: 500px;
+    position: absolute;
+    /* overflow: hidden; */
+}
+
+.btn-login:hover{
+    background-color: white;
+    color: black;
+}
+
+.container2{ 
+    transition: transform .5s ease, height .2s ease;
+    transform: scale(0);
+    position: relative;
+    height: 560px;
+    width: 400px;
+    border: 2px black solid;
+    background-color: rgba(165, 162, 162, 0.919);
+    box-shadow: 0 0 10px rgba(146, 144, 144, 0.777);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.container2.active{  
+    height: 520px;
+}
+.container2.active-popup {
+    transform: scale(1)
+}
+
+.icon-close{
+    color: black;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 35px;
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: 600;
+    left: 360px;
+} 
+
+h4{
+    margin: 15px;
+    padding: 0;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.row-input {
+    margin: 0;
+    margin-right: 2px;
+    padding: 0;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-input .input{
+    height: 60px;
+    width: 280px;  
+    border: none;
+    margin-bottom: 7.5px;
+    text-align: end;
+    outline: none;
+    font-size: 1.5em;
+    font-weight: 500;
+    word-spacing: 1px;
+    border-radius: 10px;
+    background: rgb(57, 57, 57);
+    box-shadow: 0 0 4px rgba(19, 18, 18, 0.681);   
+}
+
+.row{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px rgb(255, 0, 0) solid; */
+}
+
+.button{
+    height: 60px;
+    width: 60px;
+    margin: 7.5px;  
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 400;
+    box-shadow: 0 0 2px rgba(19, 18, 18, 0.681);
+    /* border: 2px black solid; */
+}
