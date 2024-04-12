@@ -1,38 +1,26 @@
-const container2 =document.querySelector('.container2');
-const btnLogin =document.querySelector('.btn-login');
-const iconClose =document.querySelector('.icon-close');
+let expression = '';
 
-btnLogin.addEventListener('click',()=>{
-    container2.classList.add('active-popup');
-})
+function appendNumber(number) {
+  expression += number;
+  document.getElementById('result').value = expression;
+}
 
-iconClose.addEventListener('click',()=>{
-    container2.classList.remove('active-popup');
-})
+function appendOperator(operator) {
+  expression += operator;
+  document.getElementById('result').value = expression;
+}
 
+function clearResult() {
+  expression = '';
+  document.getElementById('result').value = '';
+}
 
-let string = 0;
-let buttons = document.querySelectorAll('.button');
-Array.from(buttons).forEach((button)=>{
-    button.addEventListener('click', (e)=>{
-        if(e.target.innerHTML == "="){
-            string = eval(string);
-            document.querySelector('input').value = string;
-        }
-        else if(e.target.innerHTML == "C"){
-            string = 0;
-            document.querySelector('input').value = string;
-        }
-        else{
-            if(string == 0){
-                string = "" + e.target.innerHTML;
-                document.querySelector('input').value = string;
-            }
-            else{
-            console.log(e.target)
-            string = string + e.target.innerHTML;
-            document.querySelector('input').value = string;
-            }
-        } 
-    })
-})
+function calculate() {
+  try {
+    const result = eval(expression);
+    document.getElementById('result').value = result;
+    expression = '';
+  } catch (error) {
+    document.getElementById('result').value = 'Error';
+  }
+}
