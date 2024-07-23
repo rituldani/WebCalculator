@@ -1,0 +1,1 @@
+Add web calculator files including HTML, CSS, and JavaScript. This project provides a simple, interactive calculator that performs basic arithmetic operations (addition, subtraction, multiplication, division). Features include a user-friendly interface, responsive design, and real-time calculations.
